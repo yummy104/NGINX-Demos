@@ -6,8 +6,8 @@ spec:
   type: LoadBalancer
   ports:
   - name: http
-    port: 80
-    targetPort: 80
+    port: 10040
+    targetPort: 10041
     protocol: TCP
   selector:
     app: nginx
