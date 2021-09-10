@@ -20,5 +20,4 @@ spec:
         ports:
         - containerPort: 80
       nodeSelector:
-        disktype: ssd
         cloud.google.com/gke-nodepool: dev-irc-001-1c8b
