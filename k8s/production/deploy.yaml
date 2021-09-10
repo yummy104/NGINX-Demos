@@ -6,9 +6,6 @@ metadata:
     app: nginx
 spec:
   replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
   template:
     metadata:
       labels:
@@ -20,5 +17,4 @@ spec:
         ports:
         - containerPort: 80
       nodeSelector:
-        app: nginx
         cloud.google.com/gke-nodepool: dev-irc-001-1c8b
