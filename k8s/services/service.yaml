@@ -4,6 +4,7 @@ metadata:
   name: nginx-service
 spec:
   type: LoadBalancer
+  externalTrafficPolicy: Local
   ports:
   - name: http
     port: 10040
