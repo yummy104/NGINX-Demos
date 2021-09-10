@@ -2,6 +2,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: nginx-service
+  annotations:
+    networking.gke.io/load-balancer-type: "Internal"
 spec:
   type: LoadBalancer
   externalTrafficPolicy: Local
