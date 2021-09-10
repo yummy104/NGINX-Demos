@@ -4,6 +4,7 @@ metadata:
   name: gceme-frontend-production
 spec:
   replicas:
+  selector:
   template:
     metadata:
       name: frontend
