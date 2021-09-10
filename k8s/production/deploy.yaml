@@ -1,27 +1,21 @@
-kind: Deployment
 apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: gceme-frontend-production
+  name: nginx-deployment
+  labels:
+    app: nginx
 spec:
-  replicas:
+  replicas: 3
   selector:
+    matchLabels:
+      app: nginx
   template:
     metadata:
-      name: frontend
+      labels:
+        app: nginx
     spec:
       containers:
-      - name: frontend
-        image: gcr.io/cloud-solutions-images/gceme:1.0.0
-        resources:
-          limits:
-            memory: "500Mi"
-            cpu: "100m"
-        imagePullPolicy: Always
-        readinessProbe:
-          httpGet:
-            path: /healthz
-            port: 80
-        command: ["sh", "-c", "app -frontend=true -backend-service=http://gceme-backend:8080 -port=80"]
+      - name: nginx
+        image: nginx:1.14.2
         ports:
-        - name: frontend
-          containerPort: 80
+        - containerPort: 80
