@@ -11,5 +11,3 @@ spec:
     protocol: TCP
   selector:
     app: nginx
-  nodeSelector:
-        node_pool: dev-irc-001
