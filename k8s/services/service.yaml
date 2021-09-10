@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-service
+spec:
+  type: LoadBalancer
+  ports:o
+  - name: http
+    port: 80
+    targetPort: 80
+    protocol: TCP
+  selector:
+    app: nginx
+  nodeSelector:
+    node_pool: dev-irc-001
