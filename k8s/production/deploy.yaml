@@ -20,4 +20,4 @@ spec:
         ports:
         - containerPort: 80
   nodeSelector:
-    cloud.google.com/gke-nodepoo: dev-irc-001-1c8b
+    cloud.google.com/gke-nodepool: dev-irc-001-1c8b
